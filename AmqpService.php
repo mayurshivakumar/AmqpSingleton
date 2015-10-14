@@ -37,7 +37,7 @@ class AmqpService
     }
 
     /**
-     * If the AMQP service instance is not set it sets.
+     * Sets the instances if it is not already set.
      * @return  AMQP service instance
      */
     public static function getInstance()
