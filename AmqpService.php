@@ -3,7 +3,7 @@
 include PhpAmqpLib\Channel\AMQPChannel;
 include PhpAmqpLib\Connection\AMQPConnection;
 include PhpAmqpLib\Message\AMQPMessage;
-include is\infrastructure\config\ConfigManager;
+
 
 class AmqpService
 {
