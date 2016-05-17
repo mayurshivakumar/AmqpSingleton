@@ -35,6 +35,10 @@ class AmqpService
       );
       $this->_amqp_channel = $this->_amqp_connection->channel();
     }
+    
+    public function __clone() {
+    throw new Exception("Can't clone a singleton");
+    }
 
     /**
      * Sets the instances if it is not already set.
