@@ -36,9 +36,24 @@ class AmqpService
       $this->_amqp_channel = $this->_amqp_connection->channel();
     }
     
-    public function __clone()
+    /**
+     * Private clone method to prevent cloning of the instance of the
+     * *Singleton* instance.
+     *
+     * @return void
+     */
+    private function __clone()
     {
-        throw new Exception("Can't clone a singleton");
+    }
+
+    /**
+     * Private unserialize method to prevent unserializing of the *Singleton*
+     * instance.
+     *
+     * @return void
+     */
+    private function __wakeup()
+    {
     }
 
     /**
